@@ -1,0 +1,99 @@
+.cards{
+    
+}
+.group{
+    width: 100%;
+    margin-top: 100px;
+    position: absolute;
+}
+.front-card{
+    background-color: aqua;
+    text-align: center;
+    position: absolute;
+    width: 24%;
+    height: 100px;
+    z-index: 1;
+}
+.cards .group:nth-child(1) .front-card{
+    left: 0;
+    top: 0;
+}
+.cards .group:nth-child(2) .front-card{
+    left: 25%;
+    top: 0;
+}
+.cards .group:nth-child(3) .front-card{
+    left:50%;
+    top: 0;
+}
+.cards .group:nth-child(4) .front-card{
+    left: 75%;
+    top: 0;
+}
+.cards .group:nth-child(5) .front-card{
+    left: 0%;
+    top: 110px;
+}
+.cards .group:nth-child(6) .front-card{
+    left: 25%;
+    top: 110px;
+}
+.cards .group:nth-child(7) .front-card{
+    left: 50%;
+    top: 110px;
+}
+.cards .group:nth-child(8) .front-card{
+    left: 75%;
+    top: 110px;
+}
+.back-card{
+    background-color: coral;
+    text-align: center;
+    position: absolute;
+    z-index: 0;
+    width: 24%;
+    height: 100px;
+}
+.cards .group:nth-child(1) .back-card{
+    left: 0;
+    top: 0;
+}
+.cards .group:nth-child(2) .back-card{
+    left: 25%;
+    top: 0;
+}
+.cards .group:nth-child(3) .back-card{
+    left:50%;
+    top: 0;
+}
+.cards .group:nth-child(4) .back-card{
+    left: 75%;
+    top: 0;
+}
+.cards .group:nth-child(5) .back-card{
+    left: 0%;
+    top: 110px;
+}
+.cards .group:nth-child(6) .back-card{
+    left: 25%;
+    top: 110px;
+}
+.cards .group:nth-child(7) .back-card{
+    left: 50%;
+    top: 110px;
+}
+.cards .group:nth-child(8) .back-card{
+    left: 75%;
+    top: 110px;
+}
+@keyframes backtofront{
+    0%{transform: translateY(0px); z-index: 0}
+    30%{transform: translateY(-50px);z-index: 0}
+    49%{transform: translateY(-97.5px);z-index: 0}
+    50%{transform: translateY(-100px); z-index: 2}
+    70%{transform: translateY(-50px); z-index: 2}
+    100%{transform: translateY(0px); z-index: 2}
+}
+.animatein{
+    animation: backtofront 1s linear forwards 1;
+}

@@ -1,0 +1,26 @@
+.text{
+    padding: 5px;
+    font-family: cursive;
+    font-size: 40px;
+    animation: heading 5s linear infinite;
+}
+.content{
+    padding: 3px;
+    font-family: sans-serif;
+    font-size: 20px;
+    animation: description 5s linear infinite;
+}
+@keyframes heading{
+    0%{color: cadetblue}
+    30%{color: crimson}
+    50%{color: yellow}
+    70%{color: chartreuse}
+    100%{color: darkgoldenrod}
+}
+@keyframes description{
+    0%{color: yellow}
+    30%{color: cornflowerblue}
+    50%{color: brown}
+    70%{color: fuchsia}
+    100%{color: forestgreen}
+}

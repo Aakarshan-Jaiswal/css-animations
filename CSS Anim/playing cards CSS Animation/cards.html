@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Card Animation</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="cards">
+            <div class="group">
+                <div class="front-card">1</div>
+                <div class="back-card">1'</div>
+            </div>
+            <div class="group">
+                <div class="front-card">2</div>
+                <div class="back-card">2'</div>
+            </div>
+            <div class="group">
+                <div class="front-card">3</div>
+                <div class="back-card">3'</div>
+            </div>
+            <div class="group">
+                <div class="front-card">4</div>
+                <div class="back-card">4'</div>
+            </div>
+            <div class="group">
+                <div class="front-card">5</div>
+                <div class="back-card">5'</div>
+            </div>
+            <div class="group">
+                <div class="front-card">6</div>
+                <div class="back-card">6'</div>
+            </div>
+            <div class="group">
+                <div class="front-card">7</div>
+                <div class="back-card">7'</div>
+            </div>
+            <div class="group">
+                <div class="front-card">8</div>
+                <div class="back-card">8'</div>
+            </div>
+        </div>
+        <script src="jquery-3.5.1.min.js" style=""></script>
+        <script>
+            $(document).ready(function(){
+               
+            $(".front-card").click(function(){
+                alert("hello");
+            });
+            $(".front-card").hover(function(){
+                $(this).css("background-color", "yellow");
+                $(this).closest(".group")
+                .find(".back-card")
+                .addClass("animatein");
+            },function(){
+                $(this).css("background-color", "aqua");
+                $(this).closest(".group")
+                .find(".back-card")
+                .removeClass("animatein");
+            });
+                });
+        </script>
+    </body>
+</html>
