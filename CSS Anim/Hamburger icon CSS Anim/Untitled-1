@@ -1,0 +1,19 @@
+$(document).ready(function(){
+               $("#outer").click(function(){
+                   if(!($("#first").hasClass("openfirst")) && !($("#second").hasClass("opensecond")) && !($("#third").hasClass("openthird")))
+                       {
+                           $("#first").addClass("openfirst").removeClass("closefirst");
+                           $("#second").addClass("opensecond").removeClass("closesecond");
+                           $("#third").addClass("openthird").removeClass("closethird");
+                           
+                       }
+                   else if(!($("#first").hasClass("closefirst")) && !($("#second").hasClass("closesecond")) && !($("#third").hasClass("closethird")))
+                       {
+                           
+                           $("#first").addClass("closefirst");
+                           $("#second").addClass("closesecond");
+                           $("#third").addClass("closethird");
+                          
+                       }
+               });
+            });

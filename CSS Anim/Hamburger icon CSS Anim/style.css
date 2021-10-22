@@ -1,0 +1,66 @@
+body
+{
+    background-color: white;
+}
+.outer{
+    background-color: aqua;
+    height: 35px;
+    width: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+.first{
+    background-color: brown;
+    width: 100%;
+    height: 5px;
+    border-radius: 100px;
+    transform-origin: left;
+    //animation: uppercross 1s linear forwards 1 reverse;
+}
+.second{
+    background-color: brown;
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+    border-radius: 100px;
+    //animation: slideaway 1s linear forwards 1 reverse;
+}
+.third{
+    background-color: brown;
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+    border-radius: 100px;
+    transform-origin: left;
+    //animation: lowercross 1s linear forwards 1 reverse;
+}
+.openfirst{
+    animation: uppercross 1s linear forwards 1;
+}
+.opensecond{
+    animation: slideaway 1s linear forwards 1;
+}
+.openthird{
+    animation: lowercross 1s linear forwards 1;
+}
+.closefirst{
+    animation: uppercross 1s linear forwards 1 reverse;
+}
+.closesecond{
+    animation: slideaway 1s linear forwards 1 reverse;
+}
+.closethird{
+    animation: lowercross 1s linear forwards 1 reverse;
+}
+@keyframes slideaway{
+    0%{opacity: 1;transform: translateX(0)}
+    100%{opacity: 0;transform: translateX(1000px);}
+}
+@keyframes uppercross{
+    0%{transform: rotate(0deg) translateX(0)}
+    100%{transform: rotate(37deg) translateX(5px)}
+}
+@keyframes lowercross{
+    0%{transform: rotate(0deg) translateX(0)}
+    100%{transform: rotate(-37deg) translateX(5px)}
+}

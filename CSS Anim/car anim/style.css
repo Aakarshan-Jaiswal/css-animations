@@ -1,0 +1,25 @@
+.img{
+    width:100%;
+}
+#body{
+    animation: shock 0.5s linear infinite;
+}
+#left-wheel{
+    animation: rotate 1s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+#right-wheel{
+    animation: rotate 1s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes rotate{
+    from{transform: rotate(0deg)}
+    to{transform: rotate(7200deg)}
+}
+@keyframes shock{
+    0%{transform: translateY(0px)}
+    50%{transform: translateY(-10px)}
+    100%{transform: translateY(0px)}
+}

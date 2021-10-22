@@ -1,0 +1,57 @@
+.card{
+    height: 200px;
+    width: 300px;
+    line-height: 200px;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 300px;
+}
+.device{
+    height: 200px;
+    width: 300px;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+}
+.hive{
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    z-index: 1;
+    top: 0;
+}
+.loading{
+    height: 20px;
+    width: 60px;
+    z-index: 3;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    opacity: 0;
+}
+.text{
+    z-index: 0;
+    text-align: center;
+}
+.devicemove{
+    animation: deviceup 1s linear 1s forwards;
+}
+.hivemove{
+    animation: hivedown 1s linear 1s forwards;
+}
+.loadingshow{
+    animation: loadingblink 1s linear;
+}
+@keyframes deviceup{
+    from{transform: translateY(0px)}
+    to{transform: translateY(-200px)}
+}
+@keyframes hivedown{
+    from{transform: translateY(0px)}
+    to{transform: translateY(200px)}    
+}
+@keyframes loadingblink{
+    0%{opacity: 0}
+    50%{opacity: 1}
+    100%{opacity: 0}
+}

@@ -1,0 +1,16 @@
+body{
+    width:  100%;
+}
+.gradcolor{
+    position: absolute;
+    z-index: -100;
+    height: 100%;
+    width: 500%;
+    background: linear-gradient(-45deg,green,white,orange);
+    animation: movegrad 10s linear infinite;
+}
+@keyframes movegrad{
+    0%{transform: translateX(-80%)}
+    50%{transform: translateX(-2%)}
+    100%{transform: translateX(-80%)}
+}

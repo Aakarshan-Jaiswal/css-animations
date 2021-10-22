@@ -1,0 +1,19 @@
+.background{
+    background-color: chocolate;
+    padding: 5px;
+    border-radius: 7px;
+    animation: bordercolor 7s linear infinite;
+}
+.foreground{
+    background-color: white;
+    color: cornflowerblue;
+    padding: 5px;
+    border-radius: 7px;
+}
+@keyframes bordercolor{
+    0%{background-color: blueviolet}
+    30%{background-color: darkorange}
+    50%{background-color: chartreuse}
+    70%{background-color: deepskyblue}
+    100%{background-color: yellow}
+}

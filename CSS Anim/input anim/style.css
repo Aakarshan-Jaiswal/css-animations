@@ -1,0 +1,42 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    padding: 8px;
+    border-radius: 8px;
+    background: black;
+    clip-path: polygon(0 50%, 0 50%, 0 50%, 0 50%, 0 50%, 0 50%, 50% 50%);
+    animation: anim 1s forwards linear;
+    width: fit-content;
+    z-index: 0;
+    position: absolute;
+}
+
+.foreground {
+    position: absolute;
+    z-index: -1;
+}
+
+@keyframes anim {
+    0% {
+        clip-path: polygon(0 50%, 0 50%, 0 50%, 0 50%, 0 50%, 0 50%, 50% 50%);
+    }
+    20% {
+        clip-path: polygon(0 50%, 0 0, 0 0,  0 0, 0 0, 0 0, 50% 50%);
+    }
+    40% {
+        clip-path: polygon(0 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0, 50% 50%);
+    }
+    60% {
+        clip-path: polygon(0 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%, 50% 50%);
+    }
+    80% {
+        clip-path: polygon(0 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 50% 50%);
+    }
+    100% {
+        clip-path: polygon(0 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%);
+    }
+}

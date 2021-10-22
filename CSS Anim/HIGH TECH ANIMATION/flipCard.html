@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Fliping Card Animation</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="card">
+            <p class="text">HELLO</p>
+            <img class="device" src="device.png">
+            <img class="hive" src="hive.png">
+            <img class="loading" src="LOADING.png">
+        </div>
+        <script src="jquery-3.5.1.min.js"></script><script>
+            $(document).ready(function(){
+                $(".device,.hive,.loading,.text").hover(function(){
+                    $(this).closest(".card")
+                        .find(".device").addClass("devicemove");
+                    $(this).closest(".card")
+                        .find(".hive").addClass("hivemove");
+                    $(this).closest(".card")
+                        .find(".loading").addClass("loadingshow");
+                },function(){
+                    $(this).closest(".card")
+                        .find(".device").removeClass("devicemove");
+                    $(this).closest(".card")
+                        .find(".hive").removeClass("hivemove");
+                    $(this).closest(".card")
+                        .find(".loading").removeClass("loadingshow");
+                });
+            });
+        </script>
+    </body>
+</html>
